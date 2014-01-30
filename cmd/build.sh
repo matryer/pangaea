@@ -16,13 +16,13 @@ for PLATFORM in $PLATFORMS; do
   GOARCH=${PLATFORM#*/}
   OUTPUT=`echo $@ | sed 's/\.go//'`
   CMD="go-${GOOS}-${GOARCH} build -o releases/$VERSION/$PLATFORM/pangaea $@"
-  TARNAME="version-$SMALLVERSION-$GOOS-$GOARCH.tar"
+  TARNAME="pangaea-$SMALLVERSION-$GOOS-$GOARCH.tar"
   echo "  * Version $SMALLVERSION for $GOOS $GOARCH - [$TARNAME](https://github.com/stretchr/pangaea/releases/download/$VERSION/$TARNAME)"
   $CMD || FAILURES="$FAILURES $PLATFORM"
 
   # archive it too
   cd releases/$VERSION/$PLATFORM
-  tar -cf ../../archives/$TARNAME version
+  tar -cf ../../archives/$TARNAME pangaea
   cd ../../../../
 
 done
