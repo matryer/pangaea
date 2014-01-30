@@ -45,18 +45,7 @@ pangaea
 
 ### Download latest
 
-Or you can check out other [releases](https://github.com/stretchr/pangaea/releases).
-
-  * Version v0.1 for darwin 386 - [pangaea-v0.1-darwin-386.tar](https://github.com/stretchr/pangaea/releases/download/v0.1.0/pangaea-v0.1-darwin-386.tar)
-  * Version v0.1 for darwin amd64 - [pangaea-v0.1-darwin-amd64.tar](https://github.com/stretchr/pangaea/releases/download/v0.1.0/pangaea-v0.1-darwin-amd64.tar)
-  * Version v0.1 for freebsd 386 - [pangaea-v0.1-freebsd-386.tar](https://github.com/stretchr/pangaea/releases/download/v0.1.0/pangaea-v0.1-freebsd-386.tar)
-  * Version v0.1 for freebsd amd64 - [pangaea-v0.1-freebsd-amd64.tar](https://github.com/stretchr/pangaea/releases/download/v0.1.0/pangaea-v0.1-freebsd-amd64.tar)
-  * Version v0.1 for freebsd arm - [pangaea-v0.1-freebsd-arm.tar](https://github.com/stretchr/pangaea/releases/download/v0.1.0/pangaea-v0.1-freebsd-arm.tar)
-  * Version v0.1 for linux 386 - [pangaea-v0.1-linux-386.tar](https://github.com/stretchr/pangaea/releases/download/v0.1.0/pangaea-v0.1-linux-386.tar)
-  * Version v0.1 for linux amd64 - [pangaea-v0.1-linux-amd64.tar](https://github.com/stretchr/pangaea/releases/download/v0.1.0/pangaea-v0.1-linux-amd64.tar)
-  * Version v0.1 for linux arm - [pangaea-v0.1-linux-arm.tar](https://github.com/stretchr/pangaea/releases/download/v0.1.0/pangaea-v0.1-linux-arm.tar)
-  * Version v0.1 for windows 386 - [pangaea-v0.1-windows-386.tar](https://github.com/stretchr/pangaea/releases/download/v0.1.0/pangaea-v0.1-windows-386.tar)
-  * Version v0.1 for windows amd64 - [pangaea-v0.1-windows-amd64.tar](https://github.com/stretchr/pangaea/releases/download/v0.1.0/pangaea-v0.1-windows-amd64.tar)
+Check out [releases](https://github.com/stretchr/pangaea/releases), or download the source and build from source using `go install`.
 
 ### Rules
 
