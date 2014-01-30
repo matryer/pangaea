@@ -71,6 +71,12 @@ three
 `,
 	},
 	{
+		info: "Invalid JavaScript yields error",
+		src:  `10 + 5 is <%= 10 +  %>!`,
+		out:  ``,
+		err:  "SyntaxError: Unexpected end of input (line 1)",
+	},
+	{
 		info: "Empty line feeds are respected",
 		src: `
 
