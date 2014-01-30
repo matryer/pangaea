@@ -55,6 +55,8 @@ Or you can check out other [releases](https://github.com/stretchr/pangaea/releas
 ### Rules
 
   * Keep `<script>` and `</script>` tags on their own lines
+  * Please report any [issues](https://github.com/stretchr/pangaea/issues)
+  * There are no rules
 
 ## Development
 
