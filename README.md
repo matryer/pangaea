@@ -55,3 +55,11 @@ Or you can check out other [releases](https://github.com/stretchr/pangaea/releas
 ### Rules
 
   * Keep `<script>` and `</script>` tags on their own lines
+
+## Development
+
+To build and run the command inside the `cmd` directory, do:
+
+```
+clear; go build -o pangaea; cat ./example/source.txt | ./pangaea >> ./example/output.txt
+```
