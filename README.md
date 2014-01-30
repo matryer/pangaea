@@ -37,6 +37,12 @@ The `pangaea` command reads from the standard in pipe, and writes to the standar
 cat ./example/source.txt | pangaea >> ./example/output.txt
 ```
 
+Or you can use it in an interactive mode:
+
+```
+pangaea
+```
+
 ### Download latest
 
 Or you can check out other [releases](https://github.com/stretchr/pangaea/releases).
