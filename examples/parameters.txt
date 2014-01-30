@@ -1,0 +1,14 @@
+<script>
+
+  var list = "";
+  for (var paramKey in $params) {
+    list += "\n" + paramKey + ": " + $params[paramKey];
+  }
+
+</script>
+
+TIP: Try processing this file like this: cat ../examples/parameters.txt | ./pangaea -params="name=Mat&age=30"
+
+You passed in the following parameters:
+<%= list %>
+
