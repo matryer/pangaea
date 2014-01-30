@@ -45,6 +45,8 @@ Or you can use it in an interactive mode:
 pangaea
 ```
 
+  * See some [examples](https://github.com/stretchr/pangaea/tree/master/examples) of how you can use Pangaea.
+
 #### Parameters
 
 Pangaea supports parameters that are made available to your scripts via the `$params` global object.  You can specify parameters using the `-params` flag and a URL encoded query string:
