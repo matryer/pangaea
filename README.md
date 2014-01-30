@@ -28,3 +28,17 @@ We can call the scripts to get the name, which is Pangaea.
 
 Other JavaScript also works, so we know that 5 + 10 is 15.
 ```
+
+### Usage
+
+The `pangaea` command takes a source file, and a destination file.
+
+```
+pangaea -s=file.txt.pangaea -o=file.txt
+```
+
+```
+Usage of ./pangaea:
+  -o="pangaea-out.txt": File to output to
+  -s="": File to process
+```
