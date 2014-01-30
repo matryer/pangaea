@@ -79,6 +79,16 @@ This will make the `$params["name"]` and `$params["age"]` variables available to
 
 Check out [releases](https://github.com/stretchr/pangaea/releases), or download the source and build from source using `go install`.
 
+  * Version v0.2 for darwin amd64 - [pangaea-v0.2-darwin-amd64.tar](https://github.com/stretchr/pangaea/releases/download/v0.2.0/pangaea-v0.2-darwin-amd64.tar)
+  * Version v0.2 for freebsd 386 - [pangaea-v0.2-freebsd-386.tar](https://github.com/stretchr/pangaea/releases/download/v0.2.0/pangaea-v0.2-freebsd-386.tar)
+  * Version v0.2 for freebsd amd64 - [pangaea-v0.2-freebsd-amd64.tar](https://github.com/stretchr/pangaea/releases/download/v0.2.0/pangaea-v0.2-freebsd-amd64.tar)
+  * Version v0.2 for freebsd arm - [pangaea-v0.2-freebsd-arm.tar](https://github.com/stretchr/pangaea/releases/download/v0.2.0/pangaea-v0.2-freebsd-arm.tar)
+  * Version v0.2 for linux 386 - [pangaea-v0.2-linux-386.tar](https://github.com/stretchr/pangaea/releases/download/v0.2.0/pangaea-v0.2-linux-386.tar)
+  * Version v0.2 for linux amd64 - [pangaea-v0.2-linux-amd64.tar](https://github.com/stretchr/pangaea/releases/download/v0.2.0/pangaea-v0.2-linux-amd64.tar)
+  * Version v0.2 for linux arm - [pangaea-v0.2-linux-arm.tar](https://github.com/stretchr/pangaea/releases/download/v0.2.0/pangaea-v0.2-linux-arm.tar)
+  * Version v0.2 for windows 386 - [pangaea-v0.2-windows-386.tar](https://github.com/stretchr/pangaea/releases/download/v0.2.0/pangaea-v0.2-windows-386.tar)
+  * Version v0.2 for windows amd64 - [pangaea-v0.2-windows-amd64.tar](https://github.com/stretchr/pangaea/releases/download/v0.2.0/pangaea-v0.2-windows-amd64.tar)
+
 ### Rules
 
   * Keep `<pangaea type="text/javascript">` and `</pangaea>` tags on their own lines
