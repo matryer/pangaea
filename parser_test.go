@@ -73,7 +73,7 @@ three
 	},
 	{
 		info:   "Parameters are available as variables",
-		src:    `My name is <%= $args["name"] %>.`,
+		src:    `My name is <%= $params["name"] %>.`,
 		params: "name=Mat",
 		out: `My name is Mat.
 `,
@@ -146,10 +146,14 @@ func TestNew(t *testing.T) {
 func TestSetParamsFromURLStr(t *testing.T) {
 
 	parser := New(nil, nil)
+
+	args, _ := parser.js.Get("$params")
+	assert.True(t, args.IsObject(), "$params should be an empty object even if no params have been set")
+
 	parser.SetParamsFromURLStr("name=Mat&age=30")
 
-	args, _ := parser.js.Get("$args")
-	if assert.True(t, args.IsObject(), "$args should be an object") {
+	args, _ = parser.js.Get("$params")
+	if assert.True(t, args.IsObject(), "$params should be an object") {
 
 		name, _ := args.Object().Get("name")
 		age, _ := args.Object().Get("age")
