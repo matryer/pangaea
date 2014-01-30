@@ -47,9 +47,9 @@ pangaea
 
 Pangaea supports parameters that are made available to your scripts via the `$args` global object.  You can specify parameters using the `-params` flag and a URL encoded query string:
 
-    pangaea -params="name=Mat"
+    pangaea -params="name=Mat&age=30"
 
-This will make the `$args["name"]` variable available to your scripts.
+This will make the `$args["name"]` and `$args["age"]` variables available to your scripts.
 
   * All parameter values are strings, if you want to use other types you can cast them in your code.
 
