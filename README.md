@@ -57,3 +57,17 @@ Or you can check out other [releases](https://github.com/stretchr/pangaea/releas
   * Version v0.1 for linux arm - [version-v0.1-linux-arm.tar](https://github.com/stretchr/pangaea/releases/download/v0.1.0/version-v0.1-linux-arm.tar)
   * Version v0.1 for windows 386 - [version-v0.1-windows-386.tar](https://github.com/stretchr/pangaea/releases/download/v0.1.0/version-v0.1-windows-386.tar)
   * Version v0.1 for windows amd64 - [version-v0.1-windows-amd64.tar](https://github.com/stretchr/pangaea/releases/download/v0.1.0/version-v0.1-windows-amd64.tar)
+
+### Rules
+
+  * Keep `<script>` and `</script>` tags on their own lines
+
+## Development
+
+To build and run the command inside the `cmd` directory, do:
+
+```
+clear; go build -o pangaea; ./pangaea -s=./example/source.txt -o=./example/output.txt
+```
+
+The `example/output.txt` file will be overwritten.
