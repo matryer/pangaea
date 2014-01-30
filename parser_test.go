@@ -65,6 +65,12 @@ three
 `,
 	},
 	{
+		info: "Other JavaScript works too",
+		src:  `10 + 5 is <%= 10 + 5 %>!`,
+		out: `10 + 5 is 15!
+`,
+	},
+	{
 		info: "Empty line feeds are respected",
 		src: `
 
