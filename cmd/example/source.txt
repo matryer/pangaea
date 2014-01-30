@@ -1,8 +1,8 @@
-<script>
+<pangaea type="text/javascript">
 
   function name() {
     return "Pangaea";
   }
 
-</script>
+</pangaea>
 This is an example of how <%= name() %> works.

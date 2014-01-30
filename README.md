@@ -8,13 +8,13 @@ Pangaea works on any kind of text file including HTML pages, source code files, 
 ### How it works
 
 ```html
-This is just a normal text file that has scripts embedded:
+This is just a normal text file that has pangaea scripts embedded, e.g. JavaScript:
 
-<script>
+<pangaea type="text/javascript">
   function name(){
     return "Pangaea";
   }
-</script>
+</pangaea>
 
 We can call the scripts to get the name, which is <%= name() %>.
 
@@ -32,6 +32,24 @@ Other JavaScript also works, so we know that 5 + 10 is 15.
 ```
 
 ### Usage
+
+#### Embedding JavaScript
+
+To embed JavaScript, just use the `<pangaea>` script tag like this:
+
+```html
+<pangaea type="text/javascript">
+  // code goes here
+</pangaea>
+```
+
+For inline script that will print out the return, use the `<%=` and `%>` special tags:
+
+```html
+My name is <%= name %>.
+```
+
+#### Command line tool
 
 The `pangaea` command reads from the standard in pipe, and writes to the standard out pipe.
 
@@ -63,7 +81,7 @@ Check out [releases](https://github.com/stretchr/pangaea/releases), or download 
 
 ### Rules
 
-  * Keep `<script>` and `</script>` tags on their own lines
+  * Keep `<pangaea type="text/javascript">` and `</pangaea>` tags on their own lines
   * Please report any [issues](https://github.com/stretchr/pangaea/issues)
   * There are no rules
 

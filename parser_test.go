@@ -27,33 +27,33 @@ var parserTests = []struct {
 	},
 	{
 		info: "code blocks are removed",
-		src: `<script>
+		src: `<pangaea type="text/javascript">
     function name(){
       return "Pangaea";
     }
-</script>`,
+</pangaea>`,
 		out: ``,
 	},
 	{
 		info: "<%= %> are executed",
-		src: `<script>
+		src: `<pangaea type="text/javascript">
     function name(){
       return "Pangaea";
     }
-</script>
+</pangaea>
 My name is <%= name() %>, and <%= name() %> is my name.`,
 		out: `My name is Pangaea, and Pangaea is my name.
 `,
 	},
 	{
 		info: "Missing end script tag",
-		src: `<script>
+		src: `<pangaea type="text/javascript">
     function name(){
       return "Pangaea";
     }
 My name is <%= name() %>, and <%= name() %> is my name.`,
 		out: ``,
-		err: "pangaea: Missing end </script> tag.",
+		err: "pangaea: Missing end </pangaea> tag.",
 	},
 	{
 		info: "Line feeds are respected",

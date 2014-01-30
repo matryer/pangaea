@@ -10,8 +10,8 @@ import (
 
 var (
 	emptyLine         []byte
-	ScriptStartLine   []byte = []byte("<script>")
-	ScriptEndLine     []byte = []byte("</script>")
+	ScriptStartLine   []byte = []byte(`<pangaea`)
+	ScriptEndLine     []byte = []byte("</pangaea>")
 	Linefeed          []byte = []byte("\n")
 	InlineScriptStart []byte = []byte("<%=")
 	InlineScriptEnd   []byte = []byte("%>")

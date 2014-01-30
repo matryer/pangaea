@@ -1,14 +1,21 @@
-<script>
+<pangaea type="text/javascript">
+
+  /*
+
+    TIP:
+    $params is a global variable that gives you acecss to the parameters
+    specified using the -params flag.
+
+  */
 
   var list = "";
   for (var paramKey in $params) {
     list += "\n" + paramKey + ": " + $params[paramKey];
   }
 
-</script>
+</pangaea>
 
 TIP: Try processing this file like this: cat ../examples/parameters.txt | ./pangaea -params="name=Mat&age=30"
 
 You passed in the following parameters:
 <%= list %>
-
