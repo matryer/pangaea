@@ -1,0 +1,8 @@
+<script>
+
+  function name() {
+    return "Pangaea";
+  }
+
+</script>
+This is an example of how <%= name() %> works.

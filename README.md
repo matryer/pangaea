@@ -1,7 +1,7 @@
 pangaea
 =======
 
-Powerful pre-processor for text files - powered by JavaScript
+Powerful pre-processor for text files - powered by JavaScript.
 
 ### How it works
 
