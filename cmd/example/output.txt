@@ -1,1 +1,2 @@
 This is an example of how Pangaea works.
+This is an example of how Pangaea works.

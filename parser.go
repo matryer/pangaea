@@ -15,6 +15,7 @@ var (
 	Linefeed          []byte = []byte("\n")
 	InlineScriptStart []byte = []byte("<%=")
 	InlineScriptEnd   []byte = []byte("%>")
+	GlobalVarArgs     string = "$args"
 )
 
 type Parser struct {
@@ -27,6 +28,21 @@ func New(reader io.Reader, writer io.Writer) *Parser {
 	return &Parser{reader: NewLineReader(reader), writer: writer, js: otto.New()}
 }
 
+// SetParamsFromURLStr sets the parameter string containing the parameters
+// to make avilable to the scripts.
+func (p *Parser) SetParamsFromURLStr(s string) error {
+
+	params, err := parseParams(s)
+	if err != nil {
+		return err
+	}
+
+	p.js.Set(GlobalVarArgs, params)
+
+	return nil
+}
+
+// Parse processes the input and writes to the output.
 func (p *Parser) Parse() error {
 
 	var line []byte

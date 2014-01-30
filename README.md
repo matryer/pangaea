@@ -43,6 +43,16 @@ Or you can use it in an interactive mode:
 pangaea
 ```
 
+#### Parameters
+
+Pangaea supports parameters that are made available to your scripts via the `$args` global object.  You can specify parameters using the `-params` flag and a URL encoded query string:
+
+    pangaea -params="name=Mat"
+
+This will make the `$args["name"]` variable available to your scripts.
+
+  * All parameter values are strings, if you want to use other types you can cast them in your code.
+
 ### Download latest
 
 Check out [releases](https://github.com/stretchr/pangaea/releases), or download the source and build from source using `go install`.
