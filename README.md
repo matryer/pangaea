@@ -1,7 +1,9 @@
 pangaea
 =======
 
-Powerful pre-processor for text files - powered by JavaScript.
+**Powerful pre-processor for text files - powered by JavaScript.**
+
+Pangaea works on any kind of text file including HTML pages, source code files, documents, etc.  The easy-to-use command line tool lets you effortlessly bake Pangaea into your build process, providing you with an extremely powerful text pre-processor wherever you need it.
 
 ### How it works
 
