@@ -3,7 +3,7 @@ pangaea
 
 Powerful pre-processor for text files - powered by JavaScript
 
-## Usage
+### How it works
 
 ```html
 This is just a normal text file that has scripts embedded:
