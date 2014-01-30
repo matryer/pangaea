@@ -5,7 +5,7 @@ Powerful pre-processor for text files - powered by JavaScript
 
 ## Usage
 
-```js
+```html
 This is just a normal text file that has scripts embedded:
 
 <script>
