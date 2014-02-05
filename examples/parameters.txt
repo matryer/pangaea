@@ -3,14 +3,14 @@
   /*
 
     TIP:
-    $params is a global variable that gives you acecss to the parameters
+    $$params is a global variable that gives you acecss to the parameters
     specified using the -params flag.
 
   */
 
   var list = "";
-  for (var paramKey in $params) {
-    list += "\n" + paramKey + ": " + $params[paramKey];
+  for (var paramKey in $$params) {
+    list += "\n" + paramKey + ": " + $$params[paramKey];
   }
 
 </pangaea>

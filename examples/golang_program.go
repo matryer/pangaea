@@ -11,7 +11,7 @@ import (
 
 func main() {
 
-  log.Printf("Running code: %s", `<%= $params["code"] %>`)
-  log.Printf("%v", <%= $params["code"] %>)
+  log.Printf("Running code: %s", `<%= $$params["code"] %>`)
+  log.Printf("%v", <%= $$params["code"] %>)
 
 }
