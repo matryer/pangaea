@@ -1,0 +1,4 @@
+<pangaea type="text/javascript">
+  var now = $$run("date");
+</pangaea>
+The date is <%= now %>.

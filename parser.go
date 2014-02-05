@@ -25,10 +25,18 @@ type Parser struct {
 	js     *otto.Otto
 }
 
-func New(reader io.Reader, writer io.Writer) *Parser {
+func New(reader io.Reader, writer io.Writer) (*Parser, error) {
 	p := &Parser{reader: NewLineReader(reader), writer: writer, js: otto.New()}
-	p.js.Set(GlobalVarArgs, map[string]interface{}{}) // default empty params
-	return p
+
+	// default empty params
+	p.js.Set(GlobalVarArgs, map[string]interface{}{})
+
+	// bind built in methods
+	if err := builtInMethods.Bind(p.js); err != nil {
+		return nil, err
+	}
+
+	return p, nil
 }
 
 // SetParamsFromURLStr sets the parameter string containing the parameters

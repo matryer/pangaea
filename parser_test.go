@@ -101,6 +101,13 @@ three
 
 `,
 	},
+	{
+		info: "$$run method",
+		src:  `<%= $$run("file", "./README.md") %>`,
+		out: `./README.md: ASCII English text
+
+`,
+	},
 }
 
 func TestParserTests(t *testing.T) {
@@ -109,20 +116,24 @@ func TestParserTests(t *testing.T) {
 
 		var buf bytes.Buffer
 
-		parser := New(strings.NewReader(test.src), &buf)
+		parser, err := New(strings.NewReader(test.src), &buf)
 
-		if len(test.params) > 0 {
-			assert.NoError(t, parser.SetParamsFromURLStr(test.params))
+		if assert.NoError(t, err) {
+
+			if len(test.params) > 0 {
+				assert.NoError(t, parser.SetParamsFromURLStr(test.params))
+			}
+
+			err := parser.Parse()
+			if len(test.err) > 0 {
+				assert.Equal(t, err.Error(), test.err)
+			} else {
+				assert.NoError(t, err)
+			}
+
+			assert.Equal(t, buf.String(), test.out, test.info)
+
 		}
-
-		err := parser.Parse()
-		if len(test.err) > 0 {
-			assert.Equal(t, err.Error(), test.err)
-		} else {
-			assert.NoError(t, err)
-		}
-
-		assert.Equal(t, buf.String(), test.out, test.info)
 
 	}
 
@@ -133,9 +144,9 @@ func TestNew(t *testing.T) {
 	var buf bytes.Buffer
 	reader := strings.NewReader("")
 	writer := &buf
-	parser := New(reader, writer)
+	parser, err := New(reader, writer)
 
-	if assert.NotNil(t, parser) {
+	if assert.NotNil(t, parser) && assert.NoError(t, err) {
 		assert.Equal(t, reader, parser.reader.source, "Reader")
 		assert.Equal(t, writer, parser.writer, "Writer")
 		assert.NotNil(t, parser.js, "js")
@@ -145,7 +156,7 @@ func TestNew(t *testing.T) {
 
 func TestSetParamsFromURLStr(t *testing.T) {
 
-	parser := New(nil, nil)
+	parser, _ := New(nil, nil)
 
 	args, _ := parser.js.Get("$$params")
 	assert.True(t, args.IsObject(), "$$params should be an empty object even if no params have been set")

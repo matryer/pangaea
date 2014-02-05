@@ -17,7 +17,11 @@ func main() {
 	flag.Parse()
 
 	// make a parser
-	parser := pangaea.New(os.Stdin, os.Stdout)
+	parser, err := pangaea.New(os.Stdin, os.Stdout)
+
+	if err != nil {
+		fatal("Failed to create parser: " + err.Error())
+	}
 
 	// any params to set?
 	if len(*params) > 0 {
