@@ -105,10 +105,10 @@ The date is <%= now %>.
 
 Check out [releases](https://github.com/stretchr/pangaea/releases), or download the source and build from source using `go install`.
 
-  * Version v0.2.1 for darwin 386 - [pangaea-v0.2.1-darwin-386.tar](https://github.com/stretchr/pangaea/releases/download/v0.2.1/pangaea-v0.2.1-darwin-386.tar)
-  * Version v0.2.1 for darwin amd64 - [pangaea-v0.2.1-darwin-amd64.tar](https://github.com/stretchr/pangaea/releases/download/v0.2.1/pangaea-v0.2.1-darwin-amd64.tar)
-  * Version v0.2.1 for windows 386 - [pangaea-v0.2.1-windows-386.tar](https://github.com/stretchr/pangaea/releases/download/v0.2.1/pangaea-v0.2.1-windows-386.tar)
-  * Version v0.2.1 for windows amd64 - [pangaea-v0.2.1-windows-amd64.tar](https://github.com/stretchr/pangaea/releases/download/v0.2.1/pangaea-v0.2.1-windows-amd64.tar)
+  * Version v0.3 for darwin 386 - [pangaea-v0.3-darwin-386.tar](https://github.com/stretchr/pangaea/releases/download/v0.3.0/pangaea-v0.3-darwin-386.tar)
+  * Version v0.3 for darwin amd64 - [pangaea-v0.3-darwin-amd64.tar](https://github.com/stretchr/pangaea/releases/download/v0.3.0/pangaea-v0.3-darwin-amd64.tar)
+  * Version v0.3 for windows 386 - [pangaea-v0.3-windows-386.tar](https://github.com/stretchr/pangaea/releases/download/v0.3.0/pangaea-v0.3-windows-386.tar)
+  * Version v0.3 for windows amd64 - [pangaea-v0.3-windows-amd64.tar](https://github.com/stretchr/pangaea/releases/download/v0.3.0/pangaea-v0.3-windows-amd64.tar)
 
 ### Rules
 
