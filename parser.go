@@ -15,7 +15,8 @@ var (
 	Linefeed          []byte = []byte("\n")
 	InlineScriptStart []byte = []byte("<%=")
 	InlineScriptEnd   []byte = []byte("%>")
-	GlobalVarArgs     string = "$params"
+	FunctionPrefix    string = "$$"
+	GlobalVarArgs     string = FunctionPrefix + "params"
 )
 
 type Parser struct {

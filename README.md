@@ -67,13 +67,28 @@ pangaea
 
 #### Parameters
 
-Pangaea supports parameters that are made available to your scripts via the `$params` global object.  You can specify parameters using the `-params` flag and a URL encoded query string:
+Pangaea supports parameters that are made available to your scripts via the `$$params` global object.  You can specify parameters using the `-params` flag and a URL encoded query string:
 
     pangaea -params="name=Mat&age=30"
 
-This will make the `$params["name"]` and `$params["age"]` variables available to your scripts.
+This will make the `$$params["name"]` and `$$params["age"]` variables available to your scripts.
 
   * All parameter values are strings, if you want to use other types you can cast them in your code.
+
+## Built-in methods
+
+Pangaea comes with a series of useful built-in methods that would otherwise be impossible when running JavaScript in the browser.
+
+#### `$$contentsOf` - loads the contents of a file
+
+    (string) $$contentsOf(filename)
+
+```
+<pangaea type="text/javascript">
+  var name = $$contentsOf("name.txt");
+</pangaea>
+My name is <%= name %>.
+```
 
 ### Download latest
 
