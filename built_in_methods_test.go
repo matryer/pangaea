@@ -11,7 +11,7 @@ var buildInMethodTests = []struct {
 	Assert func(*testing.T, otto.Value, string)
 }{
 	{
-		Call: `$$loadFile("test/test.txt")`,
+		Call: `$$contentsOf("test/test.txt")`,
 		Assert: func(t *testing.T, v otto.Value, msg string) {
 			if valStr, err := v.ToString(); assert.NoError(t, err) {
 				assert.Equal(t, `This is a test text file.`, valStr, msg)

@@ -75,6 +75,21 @@ This will make the `$$params["name"]` and `$$params["age"]` variables available 
 
   * All parameter values are strings, if you want to use other types you can cast them in your code.
 
+## Built-in methods
+
+Pangaea comes with a series of useful built-in methods that would otherwise be impossible when running JavaScript in the browser.
+
+#### `$$contentsOf` - loads the contents of a file
+
+    (string) $$contentsOf(filename)
+
+```
+<pangaea type="text/javascript">
+  var name = $$contentsOf("name.txt");
+</pangaea>
+My name is <%= name %>.
+```
+
 ### Download latest
 
 Check out [releases](https://github.com/stretchr/pangaea/releases), or download the source and build from source using `go install`.

@@ -9,11 +9,11 @@ import (
 // builtInMethods represents the built in $$ methods available to
 // pangaea.
 var builtInMethods Methods = Methods{
-	// $$loadFile loads the contents of a file.
+	// $$contentsOf loads the contents of a file.
 	//
-	//     $$loadFile(filename)
+	//     $$contentsOf(filename)
 	//
-	&Method{Name: "loadFile", Func: func(call otto.FunctionCall) otto.Value {
+	&Method{Name: "contentsOf", Func: func(call otto.FunctionCall) otto.Value {
 
 		if filename, err := call.Argument(0).ToString(); err == nil {
 
