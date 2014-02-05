@@ -90,6 +90,17 @@ Pangaea comes with a series of useful built-in methods that would otherwise be i
 My name is <%= name %>.
 ```
 
+#### `$$run` - runs a shall command and returns the result
+
+    (string) $$run(command, [arg1, [arg2, [arg3...]]])
+
+```
+<pangaea type="text/javascript">
+  var now = $$run("date");
+</pangaea>
+The date is <%= now %>.
+```
+
 ### Download latest
 
 Check out [releases](https://github.com/stretchr/pangaea/releases), or download the source and build from source using `go install`.

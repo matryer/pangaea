@@ -7,14 +7,22 @@ import (
 )
 
 var buildInMethodTests = []struct {
-	Call   string
-	Assert func(*testing.T, otto.Value, string)
+	code   string
+	assert func(*testing.T, otto.Value, string)
 }{
 	{
-		Call: `$$contentsOf("test/test.txt")`,
-		Assert: func(t *testing.T, v otto.Value, msg string) {
+		code: `$$contentsOf("test/test.txt")`,
+		assert: func(t *testing.T, v otto.Value, msg string) {
 			if valStr, err := v.ToString(); assert.NoError(t, err) {
 				assert.Equal(t, `This is a test text file.`, valStr, msg)
+			}
+		},
+	},
+	{
+		code: `$$run("echo", "-n", "Hello Pangaea.")`,
+		assert: func(t *testing.T, v otto.Value, msg string) {
+			if valStr, err := v.ToString(); assert.NoError(t, err) {
+				assert.Equal(t, `Hello Pangaea.`, valStr, msg)
 			}
 		},
 	},
@@ -27,9 +35,13 @@ func TestBuildInMethodTests(t *testing.T) {
 
 	for _, test := range buildInMethodTests {
 
-		val, err := runtime.Run(test.Call)
-		if assert.NoError(t, err, "Expected no error when calling: "+test.Call) {
-			test.Assert(t, val, "Assertions failed for: "+test.Call)
+		val, err := runtime.Run(test.code)
+		if assert.NoError(t, err, "Expected no error when Codeing: "+test.code) {
+			if test.assert == nil {
+				assert.Fail(t, "Missing 'assert' func.", "Tests must provide an assert func: %s", test.code)
+			} else {
+				test.assert(t, val, "Assertions failed for: "+test.code)
+			}
 		}
 
 	}
