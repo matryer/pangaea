@@ -90,7 +90,7 @@ Pangaea comes with a series of useful built-in methods that would otherwise be i
 My name is <%= name %>.
 ```
 
-#### `$$run` - runs a shall command and returns the result
+#### `$$run` - runs a shell command and returns the result
 
     (string) $$run(command, [arg1, [arg2, [arg3...]]])
 
